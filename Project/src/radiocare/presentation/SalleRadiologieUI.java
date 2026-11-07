@@ -14,14 +14,12 @@ public class SalleRadiologieUI {
 		String nom=sc.nextLine();
 		System.out.println("donner numeroEtage ");
 		int numeroEtage=sc.nextInt();
-		
 		System.out.println("donner typeSalle  ");
 		String typeSalle =sc.nextLine();
 		System.out.println("donner equipementAttribueID ");
 		int equipementAttribueID=sc.nextInt();
 		System.out.println("donner statutDispo");
 		boolean statutDispo =sc.hasNextBoolean(); 	
-	
 		return new SalleRadiologie(nom, numeroEtage, typeSalle, equipementAttribueID, equipementAttribueID, statutDispo); 
 	}
 
