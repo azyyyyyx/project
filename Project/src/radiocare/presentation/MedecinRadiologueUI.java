@@ -22,6 +22,7 @@ public class MedecinRadiologueUI {
 		double tarif=sc.nextInt();
 		System.out.println("disponibilite  ");
 		boolean dispo = sc.nextBoolean();
+		sc.close();
 		return new MedecinRadiologue(cin, nom, prenom, spec, tarif, dispo);
 		}
 }

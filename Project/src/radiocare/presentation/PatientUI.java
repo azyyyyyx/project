@@ -32,6 +32,7 @@ public class PatientUI {
 		    System.out.println("donner l'ID de l'examen " + i + " ");
 		    historique.add(sc.nextInt());
 		}
+		sc.close();
 		return new Patient(cin,nom,prenom,dateNaissance,telephone,email,numAssurance,soldeCompte,historique);
 	}
 }

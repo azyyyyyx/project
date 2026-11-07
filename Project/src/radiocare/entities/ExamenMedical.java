@@ -11,6 +11,7 @@ public class ExamenMedical {
     private LibelleExamen libelle;
     private int dureeEstimeeMinutes;
     private double tarifHT;
+    
 	public ExamenMedical(String codeActe, LibelleExamen libelle, int dureeEstimeeMinutes,
 			double tarifHT) {
 		super();

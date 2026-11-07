@@ -25,6 +25,8 @@ public class ManipulateurRadioUI {
 		double tarifHoraire   = sc.nextDouble();
 		System.out.println("donner la statutDispo");
 		boolean statutDispo =sc.hasNextBoolean();
+		sc.close();
 		return new ManipulateurRadio(cin, nom, prenom, h, tarifHoraire, statutDispo);
+		
 	}
 }

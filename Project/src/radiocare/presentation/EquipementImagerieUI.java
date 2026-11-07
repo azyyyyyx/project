@@ -19,6 +19,7 @@ public class EquipementImagerieUI {
 		double heuresr=sc.nextInt();
 		System.out.println("donner la statu  ");
 		StatutEquipement status=StatutEquipement.valueOf(sc.nextLine());
+		sc.close();
 		return new EquipementImagerie(type, marque, heuresc, heuresr, status);
 	}
 }
