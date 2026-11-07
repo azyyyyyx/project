@@ -18,12 +18,12 @@ public class ManipulateurRadioUI {
 		System.out.println("donner prenom");
 		String prenom = sc.nextLine();
 		System.out.println("donner l'habilitation");
-		Habilitation h =Habilitation.valueOf(sc.nextLine()) ; 
+		Habilitation[] h =new Habilitation[];
 		System.out.println("donner   cin");
 		double tarifHoraire   = sc.nextDouble();
 		System.out.println("donner la statutDispo");
 		boolean statutDispo =sc.hasNextBoolean(); 
-		return new  ManipulateurRadio(idManip, prenom, nom, prenom, h, tarifHoraire, statutDispo) ;
+		return new  ManipulateurRadio(idManip, prenom, nom, prenom, h[], tarifHoraire, statutDispo) ;
 		
 		
 	}
