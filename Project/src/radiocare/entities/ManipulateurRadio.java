@@ -1,77 +1,66 @@
 package radiocare.entities;
-
 public class ManipulateurRadio {
-	private int id;
-	private int cin;
-	private String nom,prenom,habilitations;
-	private double tarif;
-	private boolean dispo;
-	
-	public ManipulateurRadio(int id, int cin, String nom, String prenom, String habilitations, double tarif,
-			boolean dispo) {
+
+    private int idManip;
+    private String cin;
+    private String nom;
+    private String prenom;
+    private String[] habilitations;   // IRM, Scanner, Rayons X
+    private double tarifHoraire;
+    private boolean statutDispo;
+	public ManipulateurRadio(int idManip, String cin, String nom, String prenom, String[] habilitations,
+			double tarifHoraire, boolean statutDispo) {
 		super();
-		this.id = id;
+		this.idManip = idManip;
 		this.cin = cin;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.habilitations = habilitations;
-		this.tarif = tarif;
-		this.dispo = dispo;
+		this.tarifHoraire = tarifHoraire;
+		this.statutDispo = statutDispo;
 	}
-
-	public int getId() {
-		return id;
+	public int getIdManip() {
+		return idManip;
 	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void setIdManip(int idManip) {
+		this.idManip = idManip;
 	}
-
-	public int getCin() {
+	public String getCin() {
 		return cin;
 	}
-
-	public void setCin(int cin) {
+	public void setCin(String cin) {
 		this.cin = cin;
 	}
-
 	public String getNom() {
 		return nom;
 	}
-
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-
 	public String getPrenom() {
 		return prenom;
 	}
-
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-
-	public String getHabilitations() {
+	public String[] getHabilitations() {
 		return habilitations;
 	}
-
-	public void setHabilitations(String habilitations) {
+	public void setHabilitations(String[] habilitations) {
 		this.habilitations = habilitations;
 	}
-
-	public double getTarif() {
-		return tarif;
+	public double getTarifHoraire() {
+		return tarifHoraire;
+	}
+	public void setTarifHoraire(double tarifHoraire) {
+		this.tarifHoraire = tarifHoraire;
+	}
+	public boolean isStatutDispo() {
+		return statutDispo;
+	}
+	public void setStatutDispo(boolean statutDispo) {
+		this.statutDispo = statutDispo;
 	}
 
-	public void setTarif(double tarif) {
-		this.tarif = tarif;
-	}
-
-	public boolean isDispo() {
-		return dispo;
-	}
-
-	public void setDispo(boolean dispo) {
-		this.dispo = dispo;
-	}
+   
 }

@@ -1,80 +1,64 @@
 package radiocare.entities;
-
 public class MedecinRadiologue {
-	private int id;
-	private int cin;
-	private String nom,prenom;
-	private String specialite;
-	private  double tarif;
-	private boolean dispo;
-	
-	public MedecinRadiologue(int id, int cin, String nom, String prenom, String specialite, double tarif,
-			boolean dispo) {
+
+    private int idMedecin;
+    private String cin;
+    private String nom;
+    private String prenom;
+    private String specialite;          // Neuroradiologie, Ostéo, Thoracique
+    private double tarifPourcentageActe;
+    private boolean dispoPlanning;
+	public MedecinRadiologue(int idMedecin, String cin, String nom, String prenom, String specialite,
+			double tarifPourcentageActe, boolean dispoPlanning) {
 		super();
-		this.id = id;
+		this.idMedecin = idMedecin;
 		this.cin = cin;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.specialite = specialite;
-		this.tarif = tarif;
-		this.dispo = dispo;
+		this.tarifPourcentageActe = tarifPourcentageActe;
+		this.dispoPlanning = dispoPlanning;
 	}
-
-	public int getId() {
-		return id;
+	public int getIdMedecin() {
+		return idMedecin;
 	}
-
-	public void setId(int id) {
-		this.id = id;
+	public void setIdMedecin(int idMedecin) {
+		this.idMedecin = idMedecin;
 	}
-
-	public int getCin() {
+	public String getCin() {
 		return cin;
 	}
-
-	public void setCin(int cin) {
+	public void setCin(String cin) {
 		this.cin = cin;
 	}
-
 	public String getNom() {
 		return nom;
 	}
-
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
-
 	public String getPrenom() {
 		return prenom;
 	}
-
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-
 	public String getSpecialite() {
 		return specialite;
 	}
-
 	public void setSpecialite(String specialite) {
 		this.specialite = specialite;
 	}
-
-	public double getTarif() {
-		return tarif;
+	public double getTarifPourcentageActe() {
+		return tarifPourcentageActe;
 	}
-
-	public void setTarif(double tarif) {
-		this.tarif = tarif;
+	public void setTarifPourcentageActe(double tarifPourcentageActe) {
+		this.tarifPourcentageActe = tarifPourcentageActe;
 	}
-
-	public boolean isDispo() {
-		return dispo;
+	public boolean isDispoPlanning() {
+		return dispoPlanning;
 	}
-
-	public void setDispo(boolean dispo) {
-		this.dispo = dispo;
+	public void setDispoPlanning(boolean dispoPlanning) {
+		this.dispoPlanning = dispoPlanning;
 	}
-	
-	
 }
