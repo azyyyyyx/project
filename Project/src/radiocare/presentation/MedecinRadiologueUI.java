@@ -10,8 +10,6 @@ public class MedecinRadiologueUI {
 	
 	public static MedecinRadiologue saisie() {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("donner l'id du medecin  ");
-		int id=sc.nextInt();
 		System.out.println("donner le cin  ");
 		int cin=sc.nextInt();
 		System.out.println("donner le nom  ");
@@ -24,6 +22,6 @@ public class MedecinRadiologueUI {
 		double tarif=sc.nextInt();
 		System.out.println("disponibilite  ");
 		boolean dispo = sc.nextBoolean();
-		return new MedecinRadiologue(id, cin, nom, prenom, spec, tarif, dispo);
+		return new MedecinRadiologue(cin, nom, prenom, spec, tarif, dispo);
 		}
 }

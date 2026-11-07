@@ -5,7 +5,7 @@ public class ManipulateurRadio {
     public enum Habilitation {
         irm, scanner, rayon_x
     }
-
+    private static int compteur = 0;
     private int idManip;
     private int cin;
     private String nom;
@@ -13,10 +13,11 @@ public class ManipulateurRadio {
     private Habilitation[] habilitations;
     private double tarifHoraire;
     private boolean statutDispo;
-	public ManipulateurRadio(int idManip, int cin, String nom, String prenom, Habilitation[] habilitations,
+	public ManipulateurRadio( int cin, String nom, String prenom, Habilitation[] habilitations,
 			double tarifHoraire, boolean statutDispo) {
 		super();
-		this.idManip = idManip;
+		compteur++;
+		this.idManip = compteur;
 		this.cin = cin;
 		this.nom = nom;
 		this.prenom = prenom;

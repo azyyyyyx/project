@@ -5,16 +5,17 @@ public class ExamenMedical {
     public enum LibelleExamen {
       irm_cerebrale, scanner_thoracique,echo_abdominale, rx_poumon
     }
-
+    private static int compteur = 0;
     private int idExamen;
     private String codeActe;
     private LibelleExamen libelle;
     private int dureeEstimeeMinutes;
     private double tarifHT;
-	public ExamenMedical(int idExamen, String codeActe, LibelleExamen libelle, int dureeEstimeeMinutes,
+	public ExamenMedical(String codeActe, LibelleExamen libelle, int dureeEstimeeMinutes,
 			double tarifHT) {
 		super();
-		this.idExamen = idExamen;
+		compteur++;
+		this.idExamen = compteur;
 		this.codeActe = codeActe;
 		this.libelle = libelle;
 		this.dureeEstimeeMinutes = dureeEstimeeMinutes;

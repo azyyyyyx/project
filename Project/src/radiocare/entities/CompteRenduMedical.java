@@ -5,17 +5,18 @@ public class CompteRenduMedical {
     public enum CodeResultat {
         normale, anomalie, urgent
     }
-
+    private static int compteur = 0;
     private int idCompteRendu;
     private int idRDV;
     private String date;
     private String refOrdonnanceTextuelle;
     private String transcriptionDiagnosticTextuel;
     private CodeResultat codeResultat;
-	public CompteRenduMedical(int idCompteRendu, int idRDV, String date, String refOrdonnanceTextuelle,
+	public CompteRenduMedical(int idRDV, String date, String refOrdonnanceTextuelle,
 			String transcriptionDiagnosticTextuel, CodeResultat codeResultat) {
 		super();
-		this.idCompteRendu = idCompteRendu;
+		compteur++;
+		this.idCompteRendu = compteur;
 		this.idRDV = idRDV;
 		this.date = date;
 		this.refOrdonnanceTextuelle = refOrdonnanceTextuelle;

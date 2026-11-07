@@ -5,7 +5,7 @@ public class MedecinRadiologue {
     public enum Specialite {
         neuroradiologie, osteo, thoracique
     }
-
+    private static int compteur = 0;
     private int idMedecin;
     private int cin;
     private String nom;
@@ -13,10 +13,11 @@ public class MedecinRadiologue {
     private Specialite specialite;
     private double tarifPourcentageActe;
     private boolean dispoPlanning;
-	public MedecinRadiologue(int idMedecin, int cin, String nom, String prenom, Specialite specialite,
+	public MedecinRadiologue(int cin, String nom, String prenom, Specialite specialite,
 			double tarifPourcentageActe, boolean dispoPlanning) {
 		super();
-		this.idMedecin = idMedecin;
+		compteur++;
+		this.idMedecin = compteur;
 		this.cin = cin;
 		this.nom = nom;
 		this.prenom = prenom;
