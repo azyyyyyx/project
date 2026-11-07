@@ -7,7 +7,7 @@ public class FactureMedicale {
     }
 
     public static final double TAUX_TVA = 0.19;   // 19%
-
+    private static int compteur = 0;
     private int numFacture;
     private int idPatient;
     private int idRDV;
@@ -16,10 +16,11 @@ public class FactureMedicale {
     private double partAssurance;
     private double partPatient;
     private StatutPaiement statutPaiement;
-	public FactureMedicale(int numFacture, int idPatient, int idRDV, double montantHT, double montantTTC,
+	public FactureMedicale(int idPatient, int idRDV, double montantHT, double montantTTC,
 			double partAssurance, double partPatient, StatutPaiement statutPaiement) {
 		super();
-		this.numFacture = numFacture;
+		compteur++;
+		this.numFacture = compteur;
 		this.idPatient = idPatient;
 		this.idRDV = idRDV;
 		this.montantHT = montantHT;

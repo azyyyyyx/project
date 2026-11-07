@@ -1,6 +1,6 @@
 package radiocare.entities;
 public class SalleRadiologie {
-
+	private static int compteur = 0;
     private int idSalle;
     private String nom;
     private int numeroEtage;
@@ -8,10 +8,11 @@ public class SalleRadiologie {
     private int equipementAttribueID;
     private double normeBlindagePlomb;
     private boolean statutDispo;
-	public SalleRadiologie(int idSalle, String nom, int numeroEtage, String typeSalle, int equipementAttribueID,
+	public SalleRadiologie(String nom, int numeroEtage, String typeSalle, int equipementAttribueID,
 			double normeBlindagePlomb, boolean statutDispo) {
 		super();
-		this.idSalle = idSalle;
+		compteur++;
+		this.idSalle = compteur;
 		this.nom = nom;
 		this.numeroEtage = numeroEtage;
 		this.typeSalle = typeSalle;

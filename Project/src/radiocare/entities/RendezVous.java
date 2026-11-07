@@ -1,7 +1,32 @@
 package radiocare.entities;
 
 public class RendezVous {
-
+	private static int compteur = 0;
+	private int idRDV;
+    private String date;
+    private String heureDebut;
+    private int dureeMinutes;
+    private int idPatient;
+    private int idMedecin;
+    private int idManip;
+    private int idSalle;
+    private int idExamen;
+    private StatutRDV statut;
+	public RendezVous(String date, String heureDebut, int dureeMinutes, int idPatient, int idMedecin,
+			int idManip, int idSalle, int idExamen, StatutRDV statut) {
+		super();
+		compteur++;
+		this.idRDV = compteur;
+		this.date = date;
+		this.heureDebut = heureDebut;
+		this.dureeMinutes = dureeMinutes;
+		this.idPatient = idPatient;
+		this.idMedecin = idMedecin;
+		this.idManip = idManip;
+		this.idSalle = idSalle;
+		this.idExamen = idExamen;
+		this.statut = statut;
+	}
     public int getIdRDV() {
 		return idRDV;
 	}
@@ -66,30 +91,7 @@ public class RendezVous {
         planifie,en_cours,realise,annule
     }
 
-    private int idRDV;
-    private String date;
-    private String heureDebut;
-    private int dureeMinutes;
-    private int idPatient;
-    private int idMedecin;
-    private int idManip;
-    private int idSalle;
-    private int idExamen;
-    private StatutRDV statut;
-	public RendezVous(int idRDV, String date, String heureDebut, int dureeMinutes, int idPatient, int idMedecin,
-			int idManip, int idSalle, int idExamen, StatutRDV statut) {
-		super();
-		this.idRDV = idRDV;
-		this.date = date;
-		this.heureDebut = heureDebut;
-		this.dureeMinutes = dureeMinutes;
-		this.idPatient = idPatient;
-		this.idMedecin = idMedecin;
-		this.idManip = idManip;
-		this.idSalle = idSalle;
-		this.idExamen = idExamen;
-		this.statut = statut;
-	}
+    
     
     
 }

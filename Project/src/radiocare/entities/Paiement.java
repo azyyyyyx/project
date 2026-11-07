@@ -5,17 +5,18 @@ public class Paiement {
     public enum ModePaiement {
         especes, cheque, carte, virement
     }
-
+    private static int compteur = 0;
     private int idPaiement;
     private int numFacture;
     private String datePaiement;
     private double montantRecu;
     private ModePaiement modePaiement;
     private String referenceTextuellePreuve;
-	public Paiement(int idPaiement, int numFacture, String datePaiement, double montantRecu, ModePaiement modePaiement,
+	public Paiement(int numFacture, String datePaiement, double montantRecu, ModePaiement modePaiement,
 			String referenceTextuellePreuve) {
 		super();
-		this.idPaiement = idPaiement;
+		compteur++;
+		this.idPaiement = compteur;
 		this.numFacture = numFacture;
 		this.datePaiement = datePaiement;
 		this.montantRecu = montantRecu;
