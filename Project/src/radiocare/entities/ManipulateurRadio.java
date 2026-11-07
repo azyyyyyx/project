@@ -7,7 +7,7 @@ public class ManipulateurRadio {
     }
 
     private int idManip;
-    private String cin;
+    private int cin;
     private String nom;
     private String prenom;
     private Habilitation[] habilitations;
