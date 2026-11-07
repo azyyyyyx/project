@@ -9,17 +9,18 @@ public class EquipementImagerie {
     public enum StatutEquipement {
         en_service, en_panne, en_maintenance
     }
-
+    private static int compteur = 0;
     private int idEquipement;
     private TypeEquipement type;
     private String marque;
     private double heuresCumulees;
     private double heuresRestantesMaintenance;
     private StatutEquipement statut;
-	public EquipementImagerie(int idEquipement, TypeEquipement type, String marque, double heuresCumulees,
+	public EquipementImagerie( TypeEquipement type, String marque, double heuresCumulees,
 			double heuresRestantesMaintenance, StatutEquipement statut) {
 		super();
-		this.idEquipement = idEquipement;
+		compteur++;
+		this.idEquipement = compteur;
 		this.type = type;
 		this.marque = marque;
 		this.heuresCumulees = heuresCumulees;
