@@ -7,13 +7,13 @@ public class MedecinRadiologue {
     }
 
     private int idMedecin;
-    private String cin;
+    private int cin;
     private String nom;
     private String prenom;
     private Specialite specialite;
     private double tarifPourcentageActe;
     private boolean dispoPlanning;
-	public MedecinRadiologue(int idMedecin, String cin, String nom, String prenom, Specialite specialite,
+	public MedecinRadiologue(int idMedecin, int cin, String nom, String prenom, Specialite specialite,
 			double tarifPourcentageActe, boolean dispoPlanning) {
 		super();
 		this.idMedecin = idMedecin;
@@ -30,10 +30,10 @@ public class MedecinRadiologue {
 	public void setIdMedecin(int idMedecin) {
 		this.idMedecin = idMedecin;
 	}
-	public String getCin() {
+	public int getCin() {
 		return cin;
 	}
-	public void setCin(String cin) {
+	public void setCin(int cin) {
 		this.cin = cin;
 	}
 	public String getNom() {
