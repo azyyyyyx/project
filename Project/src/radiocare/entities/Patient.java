@@ -16,7 +16,7 @@ public class Patient {
 
     public Patient(int cin, String nom, String prenom, String dateNaissance,
                    int telephone, String email, int numAssurance,
-                   double soldeCompte) {
+                   double soldeCompte,List<Integer> historiqueExamensIDs) {
         this.cin = cin;
         this.nom = nom;
         this.prenom = prenom;
@@ -25,6 +25,7 @@ public class Patient {
         this.email = email;
         this.numAssurance = numAssurance;
         this.soldeCompte = soldeCompte;
+        this.historiqueExamensIDs = historiqueExamensIDs;
     }
 
 	public int getCin() {

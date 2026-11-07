@@ -1,5 +1,7 @@
 package radiocare.presentation;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import radiocare.entities.Patient;
@@ -22,13 +24,14 @@ public class PatientUI {
 		System.out.println("donner le numAssurance ");
 		int numAssurance=sc.nextInt(); 
 		System.out.println("donner le soldeCompte ");
-		double soldeCompte=sc.nextInt(); 
-		
-		
-		
-		
-		
-	
+		double soldeCompte=sc.nextInt();
+		System.out.println("donner le nombre d'examens dans l'historique ");
+		int nb = sc.nextInt();
+		List<Integer> historique = new ArrayList<>();
+		for (int i = 1; i <= nb; i++) {
+		    System.out.println("donner l'ID de l'examen " + i + " ");
+		    historique.add(sc.nextInt());
+		}
+		return new Patient(cin,nom,prenom,dateNaissance,telephone,email,numAssurance,soldeCompte,historique);
 	}
-	
 }
