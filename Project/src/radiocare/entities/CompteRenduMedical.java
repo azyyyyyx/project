@@ -1,14 +1,19 @@
 package radiocare.entities;
+
 public class CompteRenduMedical {
+
+    public enum CodeResultat {
+        normale, anomalie, urgent
+    }
 
     private int idCompteRendu;
     private int idRDV;
     private String date;
     private String refOrdonnanceTextuelle;
     private String transcriptionDiagnosticTextuel;
-    private String codeResultat;
+    private CodeResultat codeResultat;
 	public CompteRenduMedical(int idCompteRendu, int idRDV, String date, String refOrdonnanceTextuelle,
-			String transcriptionDiagnosticTextuel, String codeResultat) {
+			String transcriptionDiagnosticTextuel, CodeResultat codeResultat) {
 		super();
 		this.idCompteRendu = idCompteRendu;
 		this.idRDV = idRDV;
@@ -47,10 +52,10 @@ public class CompteRenduMedical {
 	public void setTranscriptionDiagnosticTextuel(String transcriptionDiagnosticTextuel) {
 		this.transcriptionDiagnosticTextuel = transcriptionDiagnosticTextuel;
 	}
-	public String getCodeResultat() {
+	public CodeResultat getCodeResultat() {
 		return codeResultat;
 	}
-	public void setCodeResultat(String codeResultat) {
+	public void setCodeResultat(CodeResultat codeResultat) {
 		this.codeResultat = codeResultat;
 	}
 }

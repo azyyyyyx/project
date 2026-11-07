@@ -1,12 +1,18 @@
 package radiocare.entities;
+
 public class ExamenMedical {
+
+    public enum LibelleExamen {
+      irm_cerebrale, scanner_thoracique,echo_abdominale, rx_poumon
+    }
 
     private int idExamen;
     private String codeActe;
-    private String libelle;      // IRM Cérébrale, Scanner Thoracique, Écho Abdominale, RX Poumon
+    private LibelleExamen libelle;
     private int dureeEstimeeMinutes;
     private double tarifHT;
-	public ExamenMedical(int idExamen, String codeActe, String libelle, int dureeEstimeeMinutes, double tarifHT) {
+	public ExamenMedical(int idExamen, String codeActe, LibelleExamen libelle, int dureeEstimeeMinutes,
+			double tarifHT) {
 		super();
 		this.idExamen = idExamen;
 		this.codeActe = codeActe;
@@ -26,10 +32,10 @@ public class ExamenMedical {
 	public void setCodeActe(String codeActe) {
 		this.codeActe = codeActe;
 	}
-	public String getLibelle() {
+	public LibelleExamen getLibelle() {
 		return libelle;
 	}
-	public void setLibelle(String libelle) {
+	public void setLibelle(LibelleExamen libelle) {
 		this.libelle = libelle;
 	}
 	public int getDureeEstimeeMinutes() {
@@ -44,4 +50,5 @@ public class ExamenMedical {
 	public void setTarifHT(double tarifHT) {
 		this.tarifHT = tarifHT;
 	}
+    
 }

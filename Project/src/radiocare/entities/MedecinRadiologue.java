@@ -1,14 +1,19 @@
 package radiocare.entities;
+
 public class MedecinRadiologue {
+
+    public enum Specialite {
+        neuroradiologie, osteo, thoracique
+    }
 
     private int idMedecin;
     private String cin;
     private String nom;
     private String prenom;
-    private String specialite;          // Neuroradiologie, Ostéo, Thoracique
+    private Specialite specialite;
     private double tarifPourcentageActe;
     private boolean dispoPlanning;
-	public MedecinRadiologue(int idMedecin, String cin, String nom, String prenom, String specialite,
+	public MedecinRadiologue(int idMedecin, String cin, String nom, String prenom, Specialite specialite,
 			double tarifPourcentageActe, boolean dispoPlanning) {
 		super();
 		this.idMedecin = idMedecin;
@@ -43,10 +48,10 @@ public class MedecinRadiologue {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public String getSpecialite() {
+	public Specialite getSpecialite() {
 		return specialite;
 	}
-	public void setSpecialite(String specialite) {
+	public void setSpecialite(Specialite specialite) {
 		this.specialite = specialite;
 	}
 	public double getTarifPourcentageActe() {
@@ -61,4 +66,5 @@ public class MedecinRadiologue {
 	public void setDispoPlanning(boolean dispoPlanning) {
 		this.dispoPlanning = dispoPlanning;
 	}
+    
 }

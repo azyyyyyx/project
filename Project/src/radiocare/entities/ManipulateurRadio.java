@@ -1,14 +1,19 @@
 package radiocare.entities;
+
 public class ManipulateurRadio {
+
+    public enum Habilitation {
+        irm, scanner, rayon_x
+    }
 
     private int idManip;
     private String cin;
     private String nom;
     private String prenom;
-    private String[] habilitations;   // IRM, Scanner, Rayons X
+    private Habilitation[] habilitations;
     private double tarifHoraire;
     private boolean statutDispo;
-	public ManipulateurRadio(int idManip, String cin, String nom, String prenom, String[] habilitations,
+	public ManipulateurRadio(int idManip, String cin, String nom, String prenom, Habilitation[] habilitations,
 			double tarifHoraire, boolean statutDispo) {
 		super();
 		this.idManip = idManip;
@@ -43,10 +48,10 @@ public class ManipulateurRadio {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public String[] getHabilitations() {
+	public Habilitation[] getHabilitations() {
 		return habilitations;
 	}
-	public void setHabilitations(String[] habilitations) {
+	public void setHabilitations(Habilitation[] habilitations) {
 		this.habilitations = habilitations;
 	}
 	public double getTarifHoraire() {
@@ -61,6 +66,6 @@ public class ManipulateurRadio {
 	public void setStatutDispo(boolean statutDispo) {
 		this.statutDispo = statutDispo;
 	}
-
-   
+    
+    
 }

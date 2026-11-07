@@ -1,14 +1,23 @@
 package radiocare.entities;
+
 public class EquipementImagerie {
 
+    public enum TypeEquipement {
+        irm, scanner_ct, table_rx, ECHOGRAPHE
+    }
+
+    public enum StatutEquipement {
+        en_service, en_panne, en_maintenance
+    }
+
     private int idEquipement;
-    private String type;                       // IRM, Scanner-CT, Table-RX, Échographe
+    private TypeEquipement type;
     private String marque;
     private double heuresCumulees;
     private double heuresRestantesMaintenance;
-    private String statut;                     // En Service, En Panne, En Maintenance
-	public EquipementImagerie(int idEquipement, String type, String marque, double heuresCumulees,
-			double heuresRestantesMaintenance, String statut) {
+    private StatutEquipement statut;
+	public EquipementImagerie(int idEquipement, TypeEquipement type, String marque, double heuresCumulees,
+			double heuresRestantesMaintenance, StatutEquipement statut) {
 		super();
 		this.idEquipement = idEquipement;
 		this.type = type;
@@ -23,10 +32,10 @@ public class EquipementImagerie {
 	public void setIdEquipement(int idEquipement) {
 		this.idEquipement = idEquipement;
 	}
-	public String getType() {
+	public TypeEquipement getType() {
 		return type;
 	}
-	public void setType(String type) {
+	public void setType(TypeEquipement type) {
 		this.type = type;
 	}
 	public String getMarque() {
@@ -47,10 +56,11 @@ public class EquipementImagerie {
 	public void setHeuresRestantesMaintenance(double heuresRestantesMaintenance) {
 		this.heuresRestantesMaintenance = heuresRestantesMaintenance;
 	}
-	public String getStatut() {
+	public StatutEquipement getStatut() {
 		return statut;
 	}
-	public void setStatut(String statut) {
+	public void setStatut(StatutEquipement statut) {
 		this.statut = statut;
 	}
+    
 }

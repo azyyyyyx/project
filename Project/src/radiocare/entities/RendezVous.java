@@ -1,32 +1,8 @@
 package radiocare.entities;
+
 public class RendezVous {
 
-    private int idRDV;
-    private String date;
-    private String heureDebut;
-    private int dureeMinutes;
-    private int idPatient;
-    private int idMedecin;
-    private int idManip;
-    private int idSalle;
-    private int idExamen;
-    private String statut;     // Planifié, En Cours, Réalisé, Annulé
-    
-	public RendezVous(int idRDV, String date, String heureDebut, int dureeMinutes, int idPatient, int idMedecin,
-			int idManip, int idSalle, int idExamen, String statut) {
-		super();
-		this.idRDV = idRDV;
-		this.date = date;
-		this.heureDebut = heureDebut;
-		this.dureeMinutes = dureeMinutes;
-		this.idPatient = idPatient;
-		this.idMedecin = idMedecin;
-		this.idManip = idManip;
-		this.idSalle = idSalle;
-		this.idExamen = idExamen;
-		this.statut = statut;
-	}
-	public int getIdRDV() {
+    public int getIdRDV() {
 		return idRDV;
 	}
 	public void setIdRDV(int idRDV) {
@@ -80,10 +56,40 @@ public class RendezVous {
 	public void setIdExamen(int idExamen) {
 		this.idExamen = idExamen;
 	}
-	public String getStatut() {
+	public StatutRDV getStatut() {
 		return statut;
 	}
-	public void setStatut(String statut) {
+	public void setStatut(StatutRDV statut) {
 		this.statut = statut;
 	}
+	public enum StatutRDV {
+        planifie,en_cours,realise,annule
+    }
+
+    private int idRDV;
+    private String date;
+    private String heureDebut;
+    private int dureeMinutes;
+    private int idPatient;
+    private int idMedecin;
+    private int idManip;
+    private int idSalle;
+    private int idExamen;
+    private StatutRDV statut;
+	public RendezVous(int idRDV, String date, String heureDebut, int dureeMinutes, int idPatient, int idMedecin,
+			int idManip, int idSalle, int idExamen, StatutRDV statut) {
+		super();
+		this.idRDV = idRDV;
+		this.date = date;
+		this.heureDebut = heureDebut;
+		this.dureeMinutes = dureeMinutes;
+		this.idPatient = idPatient;
+		this.idMedecin = idMedecin;
+		this.idManip = idManip;
+		this.idSalle = idSalle;
+		this.idExamen = idExamen;
+		this.statut = statut;
+	}
+    
+    
 }
