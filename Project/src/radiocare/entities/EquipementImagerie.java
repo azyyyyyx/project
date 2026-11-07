@@ -3,7 +3,7 @@ package radiocare.entities;
 public class EquipementImagerie {
 
     public enum TypeEquipement {
-        irm, scanner_ct, table_rx, ECHOGRAPHE
+        irm, scanner_ct, table_rx, ECHOGRAPHE,
     }
 
     public enum StatutEquipement {
