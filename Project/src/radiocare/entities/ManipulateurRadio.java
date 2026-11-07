@@ -13,7 +13,7 @@ public class ManipulateurRadio {
     private Habilitation[] habilitations;
     private double tarifHoraire;
     private boolean statutDispo;
-	public ManipulateurRadio(int idManip, String cin, String nom, String prenom, Habilitation[] habilitations,
+	public ManipulateurRadio(int idManip, int cin, String nom, String prenom, Habilitation[] habilitations,
 			double tarifHoraire, boolean statutDispo) {
 		super();
 		this.idManip = idManip;
@@ -30,10 +30,10 @@ public class ManipulateurRadio {
 	public void setIdManip(int idManip) {
 		this.idManip = idManip;
 	}
-	public String getCin() {
+	public int getCin() {
 		return cin;
 	}
-	public void setCin(String cin) {
+	public void setCin(int cin) {
 		this.cin = cin;
 	}
 	public String getNom() {
