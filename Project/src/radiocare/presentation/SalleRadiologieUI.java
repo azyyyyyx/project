@@ -9,8 +9,7 @@ import radiocare.entities.SalleRadiologie;
 public class SalleRadiologieUI {
 	public static SalleRadiologie saisie() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("donner idSalle  ");
-		int idSalle=sc.nextInt();
+		
 		System.out.println("donner nom  ");
 		String nom=sc.nextLine();
 		System.out.println("donner numeroEtage ");
@@ -23,7 +22,7 @@ public class SalleRadiologieUI {
 		System.out.println("donner statutDispo");
 		boolean statutDispo =sc.hasNextBoolean(); 	
 	
-		return new SalleRadiologie(idSalle, nom, numeroEtage, typeSalle, equipementAttribueID, equipementAttribueID, statutDispo); 
+		return new SalleRadiologie(nom, numeroEtage, typeSalle, equipementAttribueID, equipementAttribueID, statutDispo); 
 	}
 
 	
