@@ -12,6 +12,7 @@ public class CompteRenduMedical {
     private String refOrdonnanceTextuelle;
     private String transcriptionDiagnosticTextuel;
     private CodeResultat codeResultat;
+    
 	public CompteRenduMedical(int idRDV, String date, String refOrdonnanceTextuelle,
 			String transcriptionDiagnosticTextuel, CodeResultat codeResultat) {
 		super();
