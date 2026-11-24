@@ -22,13 +22,16 @@ public class PatientService {
 	}
 	
 	public void modifierPatient(Patient p) {
-		if(patientDAO.rechercherPatient(p.getCin())==null) {
-			throw new IllegalArgumentException("Patient n'existe pas");
-		}
-		Patient old=patientDAO.rechercherPatient(p.getCin());
-		for (int id : old.getHistoriqueExamensIDs())
-			p.ajouterHistoriqueExamensIDs(id);
-		patientDAO.update(p);
+	    Patient old = patientDAO.rechercherPatient(p.getCin());
+	    if (old == null) {
+	        throw new IllegalArgumentException("Patient n'existe pas");
+	    }
+	    patientDAO.update(p);
+	    if (old.getHistoriqueExamensIDs() != null) {
+	        for (int id : old.getHistoriqueExamensIDs()) {
+	            patientDAO.ajouterHistoriqueExamensIDs(p.getCin(), id);
+	        }
+	    }
 	}
 	
 	public Patient rechercherPatient(int CIN) {

@@ -43,5 +43,17 @@ public class PatientDAO {
 			i++;
 		}
 	}
+	public void ajouterHistoriqueExamensIDs(int cin, int examenId) {
+	    Patient p = rechercherPatient(cin);
+	    if (p == null) {
+	        throw new IllegalArgumentException("Patient n'existe pas");
+	    }
+	    if (p.getHistoriqueExamensIDs() == null) {
+	        p.setHistoriqueExamensIDs(new ArrayList<>());
+	    }
+	    if (!p.getHistoriqueExamensIDs().contains(examenId)) {
+	        p.getHistoriqueExamensIDs().add(examenId);
+	    }
+	}
 }
 
