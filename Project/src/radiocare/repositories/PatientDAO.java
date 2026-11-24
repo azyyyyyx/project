@@ -1,21 +1,47 @@
 package radiocare.repositories;
 
-import radiocare.entities.Patient;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.reflect.TypeToken;
-import radiocare.entities.Patient;
-
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
+import radiocare.entities.Patient;
 
 public class PatientDAO {
-	public void create (Patient p) {
-		
+	
+	private ArrayList<Patient> patients = new ArrayList<>();
+	
+	public void create(Patient p) {
+			patients.add(p);
 	}
-
+	
+	public Patient rechercherPatient(int CIN) {
+		for(Patient P : patients) {
+			if(P.getCin()==CIN) {
+				return P;
+			}
+		}
+		return null;
+	}
+	
+	public ArrayList<Patient> read() {
+		return new ArrayList<>(patients);
+	}
+	
+	public void update(Patient p) {
+		for(int i=0;i<patients.size();i++) {
+			if(patients.get(i).getCin()==p.getCin()) {
+				patients.set(i, p);
+				return;
+			}
+		}
+	}
+	
+	public void delete(int CIN) {
+		int i=0;
+		for(Patient P : patients) {
+			if(P.getCin()==CIN) {
+				patients.remove(i);
+				return;
+			}
+			i++;
+		}
+	}
 }
+
